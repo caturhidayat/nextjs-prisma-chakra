@@ -1,6 +1,7 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import "@/styles/globals.css";
+import Layout from "@/components/layout";
 
 // Extend the theme to include custom color, fonts, etc
 const colors = {
@@ -11,14 +12,15 @@ const colors = {
     },
 };
 
-export const theme = extendTheme({colors})
-
+export const theme = extendTheme({ colors });
 
 // Pass the "Theme" props to the "ChakraProvider"
 export default function App({ Component, pageProps }) {
     return (
         <ChakraProvider theme={theme}>
-            <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
         </ChakraProvider>
     );
 }

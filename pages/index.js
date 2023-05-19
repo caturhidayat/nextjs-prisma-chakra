@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Button, useColorMode } from "@chakra-ui/react";
 
 export default function Home() {
-    const { colorMode, toggleColorMode } = useColorMode();
     return (
         <>
             <Head>
@@ -17,12 +15,8 @@ export default function Home() {
                 />
                 <link rel='icon' href='/favicon.ico' />
             </Head>
-            <main>
-                <Button onClick={toggleColorMode}>
-                    {" "}
-                    {colorMode === "light" ? "Dark" : "light"} Mode{" "}
-                </Button>
-            </main>
+
+            <h1>Hello</h1>
         </>
     );
 }
