@@ -16,7 +16,7 @@ export default function Home() {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <h1>Hello</h1>
+            <h1>Hello NextJS</h1>
         </>
     );
 }
